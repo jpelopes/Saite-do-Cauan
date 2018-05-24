@@ -1,0 +1,14 @@
+body {
+  font-family: 'Karla';
+  margin: 0;
+}
+
+@import "base/_home.scss";
+@import "base/_navigationMenu.scss";
+
+@import "albums/_albums.scss";
+@import "albums/_album.scss";
+
+@import "contact/_contact.scss";
+
+@import "bio/_bio.scss";

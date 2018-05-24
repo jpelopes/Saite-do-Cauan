@@ -1,0 +1,14 @@
+{% extends "gallery/base.html" %}
+
+{% block main_content %}
+<div class="bio">
+  <h1 class="bio__title">Bio</h1>
+  {% for b in bio %}
+    <div class="bio__content-container">
+        <p class="bio__content">
+          {{ b.text|linebreaks }}
+        </p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock main_content %}

@@ -1,0 +1,17 @@
+.bio {
+  margin-left: 15%;
+
+  &__title {
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.125rem;
+    -webkit-text-stroke-color: black;
+    border-bottom: 0.3125rem solid black;
+    font-size: 2rem;
+    margin-top: 14rem;
+  }
+
+  &__content-container {
+    width: 50%;
+  }
+}

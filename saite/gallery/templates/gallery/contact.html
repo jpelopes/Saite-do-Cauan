@@ -1,0 +1,12 @@
+{% extends "gallery/base.html" %}
+
+{% block main_content %}
+<div class="contact">
+  <h1 class="contact__title">Contato</h1>
+  <ul class="contact__content">
+    {% for contact in contacts %}
+      <li><a href="{{ contact.link }}" target="_blank">{{ contact.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock main_content %}

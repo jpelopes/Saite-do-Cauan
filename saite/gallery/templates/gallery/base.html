@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <title>{% block head_title %}Building Manager{% endblock head_title %}</title>
+  
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+	<!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+	
+  {% block head_scripts %}
+  {% endblock head_scripts %}
+</head>
+
+<body>
+  {% block page_info %}
+    <div
+      id="page-info"
+      data-background-image="{{ settings.background_image.image.url }}"
+      data-background-color="{{ settings.background_color }}"
+      data-menu-font="{{ settings.menu_font }}"
+      data-menu-font-color="{{ settings.menu_font_color }}"
+      data-menu-font-color-hover="{{ settings.menu_font_color_hover }}"
+    >
+    </div>
+  {% endblock page_info %}
+  {% block navigation_menu %}
+    <div class="navigation-menu">
+      <div class="navigation-menu__item"><a href="/">Home</a></div>
+      <div class="navigation-menu__item"><a href="/fotografia">Fotografia</a></div>
+      <div class="navigation-menu__item"><a href="/desenhos">Desenhos</a></div>
+      <div class="navigation-menu__item"><a href="/desenhourbano">Desenho Urbano</a></div>
+      <div class="navigation-menu__item"><a href="/bio">Bio</a></div>
+      <div class="navigation-menu__item"><a href="/contato">Contato</a></div>
+    </div>
+  {% endblock navigation_menu %}
+	
+  {% block main_content %}{% endblock main_content %}
+
+  {% block body_scripts %}
+  {% endblock body_scripts %}
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src='{% static "main.bundle.js" %}'></script>
+</body>

@@ -1,0 +1,21 @@
+{% extends "gallery/base.html" %}
+{% load staticfiles %}
+
+{% block main_content %}
+<div class="albums-container">
+  {% for album in albums %}
+    {% if album.show %}
+      <div class="albums-container__item">
+        <div class="albums-container__img-container">
+            <a href="fotografia/{{ album.id }}">
+              <img src="{{ album.thumbnail.url }}" class="albums-container__img">
+            </a>
+        </div>
+        <div class="albums-container__txt-container">
+          <a href="fotografia/{{ album.id }}">{{ album.name }}</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endblock main_content %}

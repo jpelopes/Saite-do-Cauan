@@ -1,0 +1,11 @@
+# [START runtime]
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT saite.wsgi
+
+beta_settings:
+    cloud_sql_instances: saite-do-cauan-dev:southamerica-east1:saite-do-cauan-dev-db
+
+runtime_config:
+  python_version: 3
+# [END runtime]
